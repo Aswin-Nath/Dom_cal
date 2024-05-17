@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
+
         .parent{
             align-items: center;
             padding-top: 100px;
         }
+
+
         .calculator {
-            padding-top: -220px;
-            border: 10px solid black;
+            border: 9px solid black;
             display: grid;
             grid-template-columns: repeat(4);
-            grid-gap: 3px;
+            grid-gap: 1px;
             max-width: 500px;
             margin: auto;
             position: relative;
             align-items: center;
+            height: 420px;
+        }
+        .body{
+            background-color: yellow;
         }
         .display {
             font-size: 25px;
@@ -26,17 +32,18 @@
             max-width:500px ;
             grid-column: span 4;
             background-color: #f1f1f1;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
         }
+
 
         button {
             padding: 10px;
             font-size: 20px;
             border: none;
             cursor: pointer;
-            width: 100%; /* Adjust the width as needed */
-            height: 100%; /* Adjust the height as needed */
+            width: 100%;
+            height: 100%; 
             }
 
         .empty:hover{
@@ -46,18 +53,18 @@
             background-color: blue;
         }
         .number, .operator, .clear, .equal ,.deci,.del{
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
             color: white;
             font-size: 40px;
         }
         .operator {
-            background-color: #008CBA; /* Blue */
+            background-color: #008CBA; 
         }
         .equal {
-            background-color: #f44336; /* Red */
+            background-color: #f44336; 
         }
         .heading{
-            padding-left: 670px;
+            padding-left: 760px;
             align-items: center;
         }
     </style>
@@ -97,6 +104,7 @@
             var inputField = document.querySelector('.display');
             var content = inputField.value;
             var length = content.length - 1;
+            
             if (content === "" || ["+", "-", "/", "*"].includes(content.charAt(length))) {
                 alert(content);
             } else {
@@ -107,10 +115,8 @@
                 }
                 var Zero = content.slice(0,length);
                 var after = Math.pow(newi, 2);
-                if (after >= Math.pow(10, 20)) {
-                    alert("out of range");
-                } else {
-                    if (parseInt(Zero) === 0) {
+            
+                if (parseInt(Zero) === 0) {
                         inputField.value = content.slice(length,length+1) + after;
                     } else {
                         var prev = content.slice(0, length + 1);
@@ -119,7 +125,7 @@
                 }
                 
             }
-        }
+        
 
 
         function root() {
@@ -191,11 +197,9 @@
                 var content = cur_display.value;
                 var length = content.length - 1;
 
-                // Check if the input field is empty
                 if (content === '') {
                     alert("Select a number first");
                 } else {
-                    // Check if the last character is an operator
                     if (["+","-","/","*"].includes(content.charAt(length))) {
                         alert("Please provide a number after an operator.");
                     } else {
@@ -207,32 +211,27 @@
             }
 
             function equal() {
-    var cur_display = document.querySelector(".display");
-    var content = cur_display.value;
-    var length = content.length - 1;
-
-    // Check if the input field is empty
-    if (content === "") {
-        alert("Select a value first");
-    } 
-    else {
-            if (["+","-","/","*","="].includes(content.charAt(length))) {
-                alert("Complete the statement first");
-            } 
-            else {
-                try {
-                    var ans = eval(content);
-                    if (ans >= Math.pow(10, 20)) {
-                        alert("out of range");
-                    } else {
-                        cur_display.value = ans;
+                var cur_display = document.querySelector(".display");
+                var content = cur_display.value;
+                var length = content.length - 1;
+                if (content === "") {
+                    alert("Select a value first");
+                } 
+                else {
+                        if (["+","-","/","*","="].includes(content.charAt(length))) {
+                            alert("Complete the statement first");
+                        } 
+                        else {
+                            try {
+                                var ans = eval(content);
+                                cur_display.value = ans;
+                                }
+                             catch (error) {
+                                alert("Error in calculation");
+                            }
+                        }
                     }
-                } catch (error) {
-                    alert("Error in calculation");
                 }
-            }
-        }
-    }
                 document.body.addEventListener("keypress",function(event){
                     if(event.key==="="){
                         equal();
