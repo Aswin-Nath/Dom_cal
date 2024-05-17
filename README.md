@@ -1,2 +1,1 @@
-# Dom_calghghghh
 Dom_functional_calculator
