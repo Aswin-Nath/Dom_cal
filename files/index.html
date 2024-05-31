@@ -2,9 +2,14 @@
 <html lang=="en">
     <head>
         <style>
+            html,body {
+                margin:0;
+                padding:0;
+            }
             .social-icons {
                     display: flex;
                     gap: 100px; 
+                    width: 700px;
                     position: relative;
                     left: 300px;
                 }
@@ -17,7 +22,7 @@
             .header{
                 height: 35px;
                 background-color:tan;
-                width: 100%;
+                width: 1520px;
             }
             a{
                 font-size: 30px;
@@ -50,7 +55,7 @@
                 position: relative;
                 left: 600px;
                 top: -15px;
-                width: 800px;
+                width: 650px;
                 display: flex;
                 gap: 40px;
             }
@@ -76,7 +81,11 @@
                 position: relative;
                 top: 20px;
                 left: 300px;
+                width: 1220px;
                 font-size: 30px;
+            }
+            .image{
+                height: 400px;
             }
             .download{
                 color:rebeccapurple ;
@@ -91,8 +100,13 @@
             .content{
                 position: relative;
                 left: 500px;
+                width: 1020px;
                 top: 120px;
                 color: white;
+            }
+            .click{
+                position: relative;
+                top: -40px;
             }
             .consult{
                 background-color:red;
@@ -132,7 +146,7 @@
             }
             .three{
                 position: relative;
-                top: 170px;
+                top: -30px;
                 left: 50px;
                 width: 1430px;
                 height: 150px;
@@ -140,14 +154,14 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+            .four h1{
+                color: black;
+            }
             .four{
                 display: flex;
                 gap: 180px;
                 position: relative;
                 left: 50px;
-            }
-            .four h1,p{
-                color: white;
             }
             .yosi{
                 background-color: red;
@@ -167,12 +181,12 @@
             .about_content{
                 position: relative;
                 left: 120px;
-                top: -400px;
+                top: -600px;
             }
             .services{
                 display: flex;
                 gap: 100px;
-                width: 1850px;
+                width: 1450px;
                 position: relative;
                 top: -600px;
             }
@@ -185,19 +199,52 @@
             .head{
                 position: relative;
                 top: -600px;
-                left: 70px;
+                left: 30px;
                 display: flex;
                 gap: 300px;
             }
             .head h1{
                 background-color: yellow;
-                width: 200px;
+                width: 300px;
                 align-items: center;
                 padding-left: 30px;
                 border-radius: 80px
             }
             .head h1:hover{
                 background-color: hotpink;
+            }
+            .head h1#a{
+                position: relative;
+                left: -70px;
+            }
+            .head h1#b{
+                position: relative;
+                left: -180px;
+            }
+            .mela{
+                display: flex;
+                gap: 40px;
+                top: -35px;
+                position: relative;
+                left: 900px;
+                width: 620px;
+            }
+            .content h1#a{
+                width: 350px;
+            }
+            .content h1#t{
+                width: 700px;
+            }
+            
+            .about_content{
+                width: 700px;
+            }
+            .about_image{
+                position: relative;
+                top: -160px;
+                /* left: -600px; */
+                /* width: 400px; */
+                /* height: 300px; */
             }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -212,13 +259,15 @@
                 <a href='#'><i class="fab fa-facebook-f"></i></a>
                 <a href='#'><i class="fab fa-whatsapp"></i></a>
                 <a href='#'><i class="fab fa-linkedin-in"></i></a>
+            </div>         
+            <div class="mela">
                 <div class='login'>
                     <a href="#">Login</a>
                 </div>
                 <div class='signup'>
                     <a href="#">Sign up</a>
                 </div>
-            </div>         
+            </div>
             <div class='upper-body'>
                 <div class="bold">
                     <strong class="Land">LANDING PAGE</strong>
@@ -237,7 +286,7 @@
             <div class="image">
                 <img class='aunty' src='down.jpg'>
                 <div class="content">
-                    <h1>Consulting Agency</h1>
+                    <h1 id="a">Consulting Agency</h1>
                     <h1 id="t">We Are Very Creative in Delivering Our Products</h1>
                 </div>
                 <div class="click">
@@ -269,10 +318,10 @@
                 </div>
                 <div class="about_content">
                     <h2>About Us</h2>
-                    <h3 style='color: red;'>At [Your Startup Name], we specialize in crafting digital solutions that drive growth and innovation.<br><br>
-                    With a team of seasoned professionals, we offer comprehensive web consulting services, from strategy development to implementation,<br><br>
-                    ensuring businesses thrive in the digital landscape. Our approach combines cutting-edge technology with creative design, delivering tailored<br><br>
-                    experiences that resonate with audiences and exceed expectations. Committed to excellence and client satisfaction, we partner with our clients<br><br>
+                    <h3 style='color: red;'>At [Your Startup Name], we specialize in crafting digital solutions that drive growth and innovation.
+                    With a team of seasoned professionals, we offer comprehensive web consulting services, from strategy development to implementation,
+                    ensuring businesses thrive in the digital landscape. Our approach combines cutting-edge technology with creative design, delivering tailored
+                    experiences that resonate with audiences and exceed expectations. Committed to excellence and client satisfaction, we partner with our clients
                     every step of the way, guiding them through the complexities of the digital world to achieve their goals.</p>
                 </div>
                 <div class="about_image">
@@ -292,8 +341,8 @@
             </div>
             <div class="head">
                 <h1>Creative Design</h1>
-                <h1>User Experience</h1>
-                <h1>Web Development</h1>
+                <h1 id="a">User Experience</h1>
+                <h1 id="b">Web Development</h1>
             </div>
         </div>
     </body>
